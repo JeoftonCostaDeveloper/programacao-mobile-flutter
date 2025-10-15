@@ -24,6 +24,7 @@ class UserProfileScreen extends StatelessWidget {
  
   @override
   Widget build(BuildContext context) {
+    // o que está sendo implementado com widget Scaffold
     return Scaffold(
       appBar: AppBar(
         title: const Text('Meu Perfil'),
@@ -48,7 +49,7 @@ class UserProfileScreen extends StatelessWidget {
         children: const <Widget>[
           CircleAvatar(
             radius: 50,
-            backgroundImage: AssetImage('assets/images/batdog.jpg'), // Substitir pela sua imagem
+            backgroundImage: AssetImage('assets/images/batdog.jpg'),
           ),
           SizedBox(height: 10),
           Text(
@@ -66,6 +67,7 @@ class UserProfileScreen extends StatelessWidget {
   }
  
   Widget _buildStatsSection(BuildContext context) {
+    // o que está sendo implementado com widget LayoutBuilder
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth > 600) {
@@ -93,6 +95,7 @@ class UserProfileScreen extends StatelessWidget {
   }
  
   Widget _buildStatCard(String title, String value) {
+    // o que está sendo implementado com widget Card
     return Card(
       margin: const EdgeInsets.all(8.0),
       child: Padding(
@@ -116,6 +119,7 @@ class UserProfileScreen extends StatelessWidget {
   Widget _buildOptionsSection() {
     return Column(
       children: <Widget>[
+        // o que está sendo implementado com widget Divider
         const Divider(),
         ListTile(
           leading: const Icon(Icons.edit),
@@ -129,6 +133,7 @@ class UserProfileScreen extends StatelessWidget {
           onTap: () { /* Ação */ },
         ),
         const Divider(),
+        // o que está sendo implementado com widget ListTile
         ListTile(
           leading: const Icon(Icons.logout, color: Colors.redAccent),
           title: const Text('Sair', style: TextStyle(color: Colors.redAccent)),
